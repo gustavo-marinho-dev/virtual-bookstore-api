@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualBookstore.UnitTests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualBookstore.CrossCutting.IoC", "VirtualBookstore.CrossCutting.IoC\VirtualBookstore.CrossCutting.IoC.csproj", "{DDE7B865-ED0B-43E5-9335-FFCE976DD3FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualBookstore.Infrastructure.ExternalServices", "VirtualBookstore.Infrastructure.ExternalServices\VirtualBookstore.Infrastructure.ExternalServices.csproj", "{D9254C36-58E6-42B8-9C04-FA44B01C72CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{DDE7B865-ED0B-43E5-9335-FFCE976DD3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDE7B865-ED0B-43E5-9335-FFCE976DD3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDE7B865-ED0B-43E5-9335-FFCE976DD3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9254C36-58E6-42B8-9C04-FA44B01C72CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9254C36-58E6-42B8-9C04-FA44B01C72CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9254C36-58E6-42B8-9C04-FA44B01C72CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9254C36-58E6-42B8-9C04-FA44B01C72CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{1D327688-54DE-4BC0-8293-02CA4DAEE99A} = {A8B6C835-A099-47A4-A9CC-6FDCCC7637FF}
 		{2E5B7072-7FBC-488F-A4BE-AB24F6FB4C14} = {21C787A8-817A-4C8E-B73E-B821D429D50D}
 		{DDE7B865-ED0B-43E5-9335-FFCE976DD3FE} = {A8B6C835-A099-47A4-A9CC-6FDCCC7637FF}
+		{D9254C36-58E6-42B8-9C04-FA44B01C72CC} = {219F1975-7C4B-4E41-BA01-3FCB916E4949}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC151D56-12EF-4ECA-A9A6-FCC0AD257AF5}

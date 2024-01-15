@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VirtualBookstore.Application.Exceptions;
 
-namespace VirtualBookstore.Application
+namespace VirtualBookstore.Application.Validators
 {
     public sealed class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>

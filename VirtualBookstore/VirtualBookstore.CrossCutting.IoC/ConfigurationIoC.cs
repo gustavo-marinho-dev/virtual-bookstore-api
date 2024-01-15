@@ -1,14 +1,11 @@
-﻿using FluentValidation;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
-using VirtualBookstore.Application;
 using VirtualBookstore.Application.Repositories;
 using VirtualBookstore.Infrastructure.Data.Context;
 using VirtualBookstore.Infrastructure.Data.Repositories;
-using AutoMapper;
+using VirtualBookstore.Infrastructure.ExternalServices.Services;
+using Refit;
 
 namespace VirtualBookstore.CrossCutting.IoC
 {
@@ -18,6 +15,7 @@ namespace VirtualBookstore.CrossCutting.IoC
         {
             ConfigurePersistence(services, configuration);
             ConfigureRepositories(services);
+            ConfigureExternalServices(services, configuration);
         }
 
         private static void ConfigurePersistence(this IServiceCollection services, IConfiguration configuration)
@@ -31,6 +29,13 @@ namespace VirtualBookstore.CrossCutting.IoC
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IAuthorRepository, AuthorRepository>();
+        }
+
+        public static void ConfigureExternalServices(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddRefitClient<IViaCEPExternalService>()
+            .ConfigureHttpClient(c => c.BaseAddress = new Uri(configuration.GetSection("ExternalServices:ViaCEP:BaseAddress").Value ??
+                throw new InvalidOperationException("Url base não encontrada no arquivo de configuração")));
         }
     }
 }

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VirtualBookstore.Domain\VirtualBookstore.Domain.csproj" />
+    <ProjectReference Include="..\VirtualBookstore.Infrastructure.ExternalServices\VirtualBookstore.Infrastructure.ExternalServices.csproj" />
   </ItemGroup>
 
   <ItemGroup>
